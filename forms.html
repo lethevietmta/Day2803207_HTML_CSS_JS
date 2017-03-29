@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="css/cssForm.css">
+		<link rel="shortcut icon" href="images/icon.png">
+		<script language="javascript" type="text/javascript" src="js/jsForm.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script language="javascript" type="text/javascript" src="js/javascript.js"></script>
+		<title>BBC-Forms</title>
+	</head>
+	<body>
+		<div id="header">
+			<a href="index.html"><img src="images/icon1.jpg" id="icon1"></a>
+			<a href="#"><img src="images/icon2.jpg" id="icon2"></a>
+			<div class="orb-header-nav">
+				<ul>
+					<li><a href="news.html">News</a></li>
+					<li><a href="">Sport</a></li>
+					<li><a href="">Weather</a></li>
+					<li><a href="">Shop</a></li>
+					<li><a href="">Earth</a></li>
+					<li><a href="forms.html">Form</a></li>
+				</ul>
+			</div>
+			<div class="orb-header-nav-search">
+				<form id="orb-search-form">
+					<input id="orb-search-q" type="text" placeholder="Search">
+					<button id="orb-search-button" class="orb-search__button">Search</button>
+				</form>
+			</div>
+		</div><!--/header-->
+		<div id="content">
+				<h1>Nội Dung Bài Viết</h1>
+			<form action="" id="myForm" method="post">
+				<div id="left">
+					<p><label>Tiêu đề</label>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<input id="txtnews" type="text" name="news"  onkeyup="link()"><span id="nw" style="color:red"></span></p>
+					<p><label>Liên kết tĩnh &nbsp; &nbsp;</label><a id="lktinh" href="index.html">http://localhost/BBC/</a><span id="lket" style="color:red"></span></p>
+					<p><label>Nội Dung</label>&nbsp; &nbsp;<textarea rows="6" cols="69" name="nd"></textarea><span id="ndung" style="color:red"></span></p>
+					<p><label>Lịch đăng</label> <input type="radio" id="rad1" onchange="checkRadio()" name="gender"><label>Đăng ngay</label>&nbsp; &nbsp;<input type="radio" id="rad2" onchange="checkRadio()" name="gender"><label>Đặt lịch</label>
+						<input id="datetime"  type="datetime-local"><span id="tg" style="color:red"></span>
+					</p>
+					<p><input type="submit" onclick="return checkValiDate(myForm)" value="Đăng Bài">&nbsp; &nbsp; <input type="submit" onclick="return resetForm(form)" value="Reset"></p>
+				</div>
+				<div id="right">
+					<label>THÔNG TIN BỔ SUNG</label>
+					<p><label>Email liên hệ</label><br><input type="Email" name="email"><span id="e" style="color:red"></span></p>
+					<p><label>Số điện thoại</label><br><input type="text" name="phone"><span id="ph" style="color:red"></span></p>
+					<p><label>Thẻ đánh dấu</label><br><input id="danhdau" name="txtdanhdau" type="text"><input type="button" onclick="theDanhdau(myForm)" value="Thêm"></p>
+					<p>Phân cách các thẻ bằng dấu phẩy(,);</p>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
